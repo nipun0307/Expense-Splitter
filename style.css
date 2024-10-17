@@ -1,0 +1,116 @@
+/* General styling for desktop */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.action-btn {
+    background-color: #ff9800;
+    margin-left: 10px;
+}
+
+.action-btn:hover {
+    background-color: #e68a00;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive design for mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    /* Align inputs and buttons on smaller screens */
+    .form-group {
+        display: block;
+        width: 100%;
+    }
+
+    input[type="text"], input[type="number"], label {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    label {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .checkbox-group label {
+        margin-right: 0;
+    }
+
+    /* Ensure summary section is readable on small screens */
+    #summary p {
+        font-size: 1.1em;
+        padding: 10px 0;
+    }
+}

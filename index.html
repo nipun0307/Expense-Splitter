@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Expense Splitter</h1>
+
+        <!-- Add Payees -->
+        <div class="section">
+            <h2>Add Payees</h2>
+            <input type="text" id="payeeName" placeholder="Payee Name" class="input-field">
+            <button onclick="addPayee()" class="btn">Add Payee</button>
+
+            <h3>Payee List:</h3>
+            <ul id="payeeList"></ul>
+        </div>
+
+        <!-- Add Expenses -->
+        <div class="section">
+            <h2>Add Expenses</h2>
+            <div class="expense-inputs">
+                <input type="text" id="itemName" placeholder="Item Name" class="input-field short">
+                <input type="number" id="itemCost" placeholder="Item Cost" class="input-field short">
+            </div>
+            
+            <h3>Select Payees:</h3>
+            <div id="payeesCheck" class="checkbox-container"></div>
+            <button onclick="addExpense()" class="btn">Add Expense</button>
+
+            <h3>Expenses:</h3>
+            <div id="expenseList"></div>
+        </div>
+
+        <!-- Apply Tax and Discount -->
+        <div class="section">
+            <h2>Apply Tax & Discount</h2>
+            <input type="number" id="taxAmount" placeholder="Tax Amount" class="input-field">
+            <input type="number" id="discountAmount" placeholder="Discount Amount" class="input-field">
+            <button onclick="applyTaxAndDiscount()" class="btn">Apply</button>
+        </div>
+
+        <!-- Summary -->
+        <div id="summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
