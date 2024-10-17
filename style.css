@@ -9,7 +9,6 @@ body {
     margin: 0 auto;
 }
 
-/* Styled input fields */
 input[type="text"], input[type="number"] {
     padding: 10px;
     margin: 5px 0;
@@ -19,7 +18,7 @@ input[type="text"], input[type="number"] {
     border-radius: 5px;
 }
 
-/* Styled buttons */
+/* General button styling */
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -34,13 +33,30 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Action buttons smaller (rename and delete) */
 .action-btn {
     background-color: #ff9800;
     margin-left: 10px;
+    padding: 5px 10px;  /* Smaller padding */
+    font-size: 0.9em;   /* Slightly smaller font size */
+    border-radius: 3px; /* Smaller radius */
+    width: auto;        /* Auto width to fit text */
 }
 
 .action-btn:hover {
     background-color: #e68a00;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    margin-left: 5px;
+    padding: 5px 10px;  /* Smaller padding for delete button */
+    font-size: 0.9em;   /* Slightly smaller font size */
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
 }
 
 h3 {
@@ -58,7 +74,7 @@ li {
 
 /* Expenses section styling */
 #expenses-section {
-    background-color: #f5f5f5;  /* Light grey background to differentiate */
+    background-color: #f5f5f5;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -95,6 +111,15 @@ li {
 /* Payees section styling */
 #payees-section {
     margin-top: 30px;
+}
+
+/* Payees list with buttons in the same line */
+.payee-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 /* Responsive design for mobile */
@@ -169,5 +194,30 @@ li {
     .expense-actions {
         justify-content: center;
         margin-top: 10px;
+    }
+
+    /* Align payee name and buttons on the same line */
+    .payee-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .payee-name {
+        flex: 1;
+        text-align: left;
+    }
+
+    .payee-actions {
+        flex-shrink: 0;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Mobile buttons smaller */
+    .action-btn, .delete-btn {
+        padding: 3px 8px; /* Further reduce padding for mobile */
+        font-size: 0.85em;
     }
 }
